@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.miracle.michael.naoh.R;
 import com.miracle.michael.naoh.base.BaseFragment;
+import com.miracle.michael.naoh.base.GOTO;
 import com.miracle.michael.naoh.common.network.PageLoadCallback;
 import com.miracle.michael.naoh.common.network.ZClient;
 import com.miracle.michael.naoh.common.util.ContextHolder;
@@ -80,6 +81,12 @@ public class Fragment1 extends BaseFragment<Fragment1Binding> {
 
 
     private void initCallback() {
+        binding.tvContactCustomerService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GOTO.CustomerServiceActivity();
+            }
+        });
         callBack = new PageLoadCallback(mAdapter, binding.recyclerView) {
             @Override
             public void requestAction(int page, int limit) {

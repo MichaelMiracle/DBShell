@@ -29,7 +29,7 @@ public interface Constant {
     String testPassword = "888888";
 
     //QQ聊天
-    String qqUrl = "mqq://im/chat?chat_type=wpa&uin=%1$s&version=1&src_type=web";
+    String qqUrl = "mqq://im/chat?chat_type=crm&uin=%1$s&version=1&src_type=web";
     //微信聊天
     String wxUrl = "vnd.android.cursor.item/vnd.com.tencent.mm.chatting.profile";
 }

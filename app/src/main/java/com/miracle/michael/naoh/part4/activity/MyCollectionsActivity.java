@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.miracle.michael.naoh.R;
+import com.miracle.michael.naoh.base.AppConfig;
 import com.miracle.michael.naoh.base.BaseActivity;
 import com.miracle.michael.naoh.common.network.PageLoadCallback;
 import com.miracle.michael.naoh.common.network.ZClientFootBall;
@@ -36,7 +37,7 @@ public class MyCollectionsActivity extends BaseActivity<SwipeRecyclerBinding> {
         callBack = new PageLoadCallback(mAdapter, binding.recyclerView) {
             @Override
             public void requestAction(int page, int limit) {
-                ZClientFootBall.getService(Service4.class).getMycollections(page, limit).enqueue(callBack);
+                ZClientFootBall.getService(Service4.class).getMycollections(AppConfig.APP_TYPE, page, limit).enqueue(callBack);
             }
         };
         callBack.setSwipeRefreshLayout(binding.swipeRefreshLayout);

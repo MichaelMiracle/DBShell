@@ -7,7 +7,9 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.miracle.michael.naoh.R;
+import com.miracle.michael.naoh.base.AppConfig;
 import com.miracle.michael.naoh.base.BaseActivity;
+import com.miracle.michael.naoh.base.GOTO;
 import com.miracle.michael.naoh.common.network.ZCallback;
 import com.miracle.michael.naoh.common.network.ZClientFootBall;
 import com.miracle.michael.naoh.common.network.ZResponse;
@@ -82,7 +84,11 @@ public class SimpleWebActivity extends BaseActivity<ActivitySimpleWebBinding> {
         binding.cbRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZClientFootBall.getService(Service1.class).likeOrDislike(id).enqueue(likeCallback);
+                if (CommonUtils.getUser() == null) {
+                    GOTO.LoginActivity();
+                } else {
+                    ZClientFootBall.getService(Service1.class).likeOrDislike(AppConfig.APP_TYPE, id).enqueue(likeCallback);
+                }
             }
         });
         binding.swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

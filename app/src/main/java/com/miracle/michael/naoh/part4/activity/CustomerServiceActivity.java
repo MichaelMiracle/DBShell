@@ -9,11 +9,17 @@ import android.view.View;
 import com.miracle.michael.naoh.R;
 import com.miracle.michael.naoh.base.BaseActivity;
 import com.miracle.michael.naoh.base.Constant;
+import com.miracle.michael.naoh.common.network.ZCallback;
+import com.miracle.michael.naoh.common.network.ZClientFootBall;
+import com.miracle.michael.naoh.common.network.ZResponse;
 import com.miracle.michael.naoh.common.util.ToastUtil;
 import com.miracle.michael.naoh.databinding.ActivityCustomerServiceBinding;
+import com.miracle.michael.naoh.part4.Service4;
+import com.miracle.michael.naoh.part4.entity.QQWechat;
 
 public class CustomerServiceActivity extends BaseActivity<ActivityCustomerServiceBinding> {
-
+    private String qq = "800859225";
+    private String wechat = "Summer_JH5";
 
     @Override
     public int getLayout() {
@@ -23,6 +29,17 @@ public class CustomerServiceActivity extends BaseActivity<ActivityCustomerServic
     @Override
     public void initView() {
         setTitle("联系客服");
+        reqData();
+    }
+
+    private void reqData() {
+        ZClientFootBall.getService(Service4.class).getCustomerServiceAccount().enqueue(new ZCallback<ZResponse<QQWechat>>() {
+            @Override
+            public void onSuccess(ZResponse<QQWechat> data) {
+                qq = data.getData().getQq();
+                wechat = data.getData().getWeichar();
+            }
+        });
     }
 
     @Override
@@ -36,7 +53,7 @@ public class CustomerServiceActivity extends BaseActivity<ActivityCustomerServic
         switch (v.getId()) {
             case R.id.ibQQ:
                 try {
-                    String qqUrl = String.format(Constant.qqUrl, "800859225");
+                    String qqUrl = String.format(Constant.qqUrl, qq);
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(qqUrl)));
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -48,7 +65,7 @@ public class CustomerServiceActivity extends BaseActivity<ActivityCustomerServic
                 try {
                     ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                     // 将文本内容放到系统剪贴板里。
-                    cm.setText("Summer_JH5");
+                    cm.setText(wechat);
                     Intent intent = getPackageManager().getLaunchIntentForPackage("com.tencent.mm");
                     startActivity(intent);
                 } catch (Exception e) {

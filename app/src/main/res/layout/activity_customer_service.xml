@@ -23,6 +23,6 @@
             android:layout_marginTop="10dp"
             app:ItemBar_Left_Icon="@string/icon_wechat"
             app:ItemBar_Left_TextColor="@color/weChatGreen"
-            app:ItemBar_Text="复制并添加微信添加客服:Summer_JH5" />
+            app:ItemBar_Text="复制并添加微信添加客服" />
     </LinearLayout>
 </layout>

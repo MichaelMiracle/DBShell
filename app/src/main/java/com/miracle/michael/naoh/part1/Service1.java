@@ -25,8 +25,7 @@ public interface Service1 {
 
 
     @POST("footballCollect")
-    Call<ZResponse> likeOrDislike(@Query("createid") int createid);
-
+    Call<ZResponse> likeOrDislike(@Query("type") String type, @Query("createid") int createid);
 
     @POST("caipiao/index")
     Call<ZResponse<List<Lottery>>> getLotteries();
