@@ -9,6 +9,7 @@ import com.hyphenate.chat.EMGroupInfo;
 import com.hyphenate.exceptions.HyphenateException;
 import com.miracle.michael.naoh.base.BaseActivity;
 import com.miracle.michael.naoh.base.GOTO;
+import com.miracle.michael.naoh.common.util.CommonUtils;
 import com.miracle.michael.naoh.common.util.ThreadUtil;
 import com.miracle.michael.naoh.databinding.ActivityMainBinding;
 import com.miracle.michael.naoh.im.Constant;
@@ -55,7 +56,9 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
                 break;
 
             case R.id.rlGroupChat:
-                if (null == groupInfo) {
+                if (CommonUtils.getUser() == null) {
+                    GOTO.LoginActivity();
+                } else if (null == groupInfo) {
                     loadAndShowData();
                 } else {
                     Intent intent = new Intent(mContext, ChatActivity.class);

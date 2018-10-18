@@ -13,7 +13,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import com.miracle.michael.naoh.MainActivity;
 import com.miracle.michael.naoh.R;
 import com.miracle.michael.naoh.base.AppConfig;
 import com.miracle.michael.naoh.base.GOTO;
@@ -23,10 +22,10 @@ import com.miracle.michael.naoh.common.network.ZResponse;
 import com.miracle.michael.naoh.common.util.CommonUtils;
 import com.miracle.michael.naoh.common.util.Encryptor;
 import com.miracle.michael.naoh.common.util.GsonUtil;
+import com.miracle.michael.naoh.common.util.ThreadUtil;
 import com.miracle.michael.naoh.common.util.sqlite.SQLiteKey;
 import com.miracle.michael.naoh.common.util.sqlite.SQLiteUtil;
 import com.miracle.michael.naoh.login.ServiceLogin;
-import com.miracle.michael.naoh.login.activity.LoginActivity;
 import com.miracle.michael.naoh.login.entity.User;
 
 import retrofit2.Call;
@@ -128,11 +127,15 @@ public class WelcomeActivity extends Activity {
     }
 
     private void goNative() {
+        GOTO.MainActivity();
+        finish();
         if (SQLiteUtil.getBoolean(SQLiteKey.AUTOLOGIN)) {
-            autoLogin();
-        } else {
-            startActivity(new Intent(this, LoginActivity.class));
-            finish();
+            ThreadUtil.runInBackGroundThread(new Runnable() {
+                @Override
+                public void run() {
+                    autoLogin();
+                }
+            });
         }
     }
 
@@ -147,15 +150,6 @@ public class WelcomeActivity extends Activity {
                 User user = data.getData();
                 AppConfig.USER_ID = String.valueOf(user.getUserId());
                 SQLiteUtil.saveString(SQLiteKey.TOKEN, Encryptor.encryptString(user.getToken()));
-                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
-                finish();
-            }
-
-            @Override
-            public void onFailure(Call<ZResponse<User>> call, Throwable t) {
-                super.onFailure(call, t);
-                GOTO.LoginActivity();
-                finish();
             }
         });
     }

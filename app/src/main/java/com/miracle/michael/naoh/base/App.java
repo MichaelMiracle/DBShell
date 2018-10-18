@@ -58,6 +58,7 @@ public class App extends Application {
         }
         initImagePicker();
     }
+
     private void initImagePicker() {
         ImagePicker imagePicker = ImagePicker.getInstance();
         imagePicker.setImageLoader(new ZDisplayer());   //设置图片加载器
@@ -125,6 +126,9 @@ public class App extends Application {
 
     public static void exit(boolean autoLogin) {
         SQLiteUtil.saveBoolean(SQLiteKey.AUTOLOGIN, autoLogin);
+        if (!autoLogin) {
+            SQLiteUtil.saveString(SQLiteKey.USER, "");
+        }
         app.finishAllActivity();
         EMClient.getInstance().logout(false);
         android.os.Process.killProcess(android.os.Process.myPid());

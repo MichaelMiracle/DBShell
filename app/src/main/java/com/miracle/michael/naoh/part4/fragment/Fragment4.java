@@ -91,7 +91,11 @@ public class Fragment4 extends BaseFragment<Fragment4Binding> {
 //                startActivity(new Intent(mContext, SaiShiFenXilerActivity.class).putExtra(Constant.REQKEY, "zqbfyc").putExtra(Constant.TITLE, "赛事分析"));
                 break;
             case R.id.ibBailManage:
-                GOTO.MyCollectionsActivity();
+                if (userInfo == null) {
+                    GOTO.LoginActivity();
+                } else {
+                    GOTO.MyCollectionsActivity();
+                }
                 break;
             case R.id.ibSettings:
                 GOTO.SettingActivity();
@@ -108,11 +112,15 @@ public class Fragment4 extends BaseFragment<Fragment4Binding> {
                 GOTO.CustomerServiceActivity();
                 break;
             case R.id.ibShare:
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, userInfo.getNickname() + "邀请你加入" + CommonUtils.getAppName(mContext));
-                sendIntent.setType("text/plain");
-                startActivity(Intent.createChooser(sendIntent, "分享"));
+                if (userInfo == null) {
+                    GOTO.LoginActivity();
+                } else {
+                    Intent sendIntent = new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, userInfo.getNickname() + "邀请你加入" + CommonUtils.getAppName(mContext));
+                    sendIntent.setType("text/plain");
+                    startActivity(Intent.createChooser(sendIntent, "分享"));
+                }
                 break;
 
             case R.id.ibAboutUs:

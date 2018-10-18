@@ -3,10 +3,7 @@ package com.miracle.michael.naoh.part4.fragment;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.View;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.miracle.michael.naoh.R;
 import com.miracle.michael.naoh.base.BaseFragment;
 import com.miracle.michael.naoh.base.GOTO;
@@ -51,17 +48,25 @@ public class MeFragment extends BaseFragment<FragmentMeBinding> {
                 binding.flmenu.closeMenu();
                 switch (view.getItemInfo().text) {
                     case menu1:
-                        GOTO.MyCollectionsActivity();
+                        if (userInfo == null) {
+                            GOTO.LoginActivity();
+                        } else {
+                            GOTO.MyCollectionsActivity();
+                        }
                         break;
                     case menu2:
                         GOTO.CustomerServiceActivity();
                         break;
                     case menu3:
-                        Intent sendIntent = new Intent();
-                        sendIntent.setAction(Intent.ACTION_SEND);
-                        sendIntent.putExtra(Intent.EXTRA_TEXT, userInfo.getNickname() + "邀请你加入" + CommonUtils.getAppName(mContext));
-                        sendIntent.setType("text/plain");
-                        startActivity(Intent.createChooser(sendIntent, "分享"));
+                        if (userInfo == null) {
+                            GOTO.LoginActivity();
+                        } else {
+                            Intent sendIntent = new Intent();
+                            sendIntent.setAction(Intent.ACTION_SEND);
+                            sendIntent.putExtra(Intent.EXTRA_TEXT, userInfo.getNickname() + "邀请你加入" + CommonUtils.getAppName(mContext));
+                            sendIntent.setType("text/plain");
+                            startActivity(Intent.createChooser(sendIntent, "分享"));
+                        }
                         break;
                     case menu4:
                         GOTO.SettingActivity();
