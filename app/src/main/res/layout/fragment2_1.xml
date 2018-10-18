@@ -11,7 +11,7 @@
             android:layout_height="wrap_content"
             android:scrollbars="none">
 
-            <com.miracle.michael.naoh.common.view.zradiogroup.ZRadioGroup
+            <com.miracle.base.view.zradiogroup.ZRadioGroup
                 android:id="@+id/zRadiogroup2"
                 android:background="@color/white"
                 android:paddingLeft="@dimen/dp10"

@@ -15,7 +15,7 @@
             android:gravity="center_vertical"
             android:paddingRight="20dp">
 
-            <com.miracle.michael.naoh.common.view.ItemBar
+            <com.miracle.base.view.ItemBar
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -31,7 +31,7 @@
                 android:textOn="开启" />
         </LinearLayout>
 
-        <com.miracle.michael.naoh.common.view.ItemBar
+        <com.miracle.base.view.ItemBar
             android:id="@+id/ibClearCache"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

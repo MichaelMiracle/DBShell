@@ -16,7 +16,7 @@
             android:orientation="vertical"
             android:padding="@dimen/adaptive_20dp">
 
-            <com.miracle.michael.naoh.common.view.CircleImageView
+            <com.miracle.base.view.CircleImageView
                 android:id="@+id/ivHeadImg"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -24,28 +24,28 @@
 
         </LinearLayout>
 
-        <com.miracle.michael.naoh.common.view.ItemBar
+        <com.miracle.base.view.ItemBar
             android:id="@+id/ibNickName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:ItemBar_Left_Icon="昵称:" />
 
-        <com.miracle.michael.naoh.common.view.ItemBar
+        <com.miracle.base.view.ItemBar
             android:id="@+id/ibPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:ItemBar_Left_Icon="手机:" />
 
-        <com.miracle.michael.naoh.common.view.ItemBar
+        <com.miracle.base.view.ItemBar
             android:id="@+id/ibEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:ItemBar_Left_Icon="邮箱:" />
 
-        <com.miracle.michael.naoh.common.view.ItemBar
+        <com.miracle.base.view.ItemBar
             android:id="@+id/ibModifyPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

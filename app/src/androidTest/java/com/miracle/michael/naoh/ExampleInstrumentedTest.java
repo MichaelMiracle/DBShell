@@ -1,4 +1,4 @@
-package com.miracle.michael.naoh;
+package com.miracle.michael;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

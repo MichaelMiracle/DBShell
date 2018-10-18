@@ -21,7 +21,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <com.miracle.michael.naoh.common.view.CircleImageView
+                <com.miracle.base.view.CircleImageView
                     android:id="@+id/ivHeadImg"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
@@ -38,7 +38,7 @@
             </LinearLayout>
 
 
-            <com.miracle.michael.naoh.common.view.IconFontTextView
+            <com.miracle.base.view.IconFontTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/icon_right_arrow"
@@ -58,7 +58,7 @@
                 android:background="@mipmap/butterfly"
                 android:scaleType="centerCrop" />
 
-            <com.miracle.michael.naoh.common.view.arcmenu.GFloatingMenu
+            <com.miracle.base.view.arcmenu.GFloatingMenu
                 android:id="@+id/flmenu"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

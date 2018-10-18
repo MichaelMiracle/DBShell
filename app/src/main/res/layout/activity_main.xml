@@ -17,7 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <com.miracle.michael.naoh.common.view.IconFontTextView
+            <com.miracle.base.view.IconFontTextView
                 android:id="@+id/tvContactCustomerService"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -32,20 +32,20 @@
         </RelativeLayout>
 
 
-        <com.miracle.michael.naoh.common.view.zradiogroup.ZRadioGroup
+        <com.miracle.base.view.zradiogroup.ZRadioGroup
             android:id="@+id/zRadiogroup"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/top_line">
 
-            <com.miracle.michael.naoh.common.view.zradiogroup.ZRadioButton
+            <com.miracle.base.view.zradiogroup.ZRadioButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 app:ZRadioButton_Icon="@string/icon_tab_home"
                 app:ZRadioButton_Text="快讯" />
 
-            <com.miracle.michael.naoh.common.view.zradiogroup.ZRadioButton
+            <com.miracle.base.view.zradiogroup.ZRadioButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="-2dp"
@@ -53,7 +53,7 @@
                 app:ZRadioButton_Icon="@string/icon_tab_category"
                 app:ZRadioButton_Text="分类" />
 
-            <com.miracle.michael.naoh.common.view.zradiogroup.ZRadioButton
+            <com.miracle.base.view.zradiogroup.ZRadioButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="-2dp"
@@ -69,7 +69,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-                <com.miracle.michael.naoh.common.view.IconFontTextView
+                <com.miracle.base.view.IconFontTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -89,13 +89,13 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-            <com.miracle.michael.naoh.common.view.zradiogroup.ZRadioButton
+            <com.miracle.base.view.zradiogroup.ZRadioButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 app:ZRadioButton_Icon="@string/icon_tab_me"
                 app:ZRadioButton_Text="我的" />
-        </com.miracle.michael.naoh.common.view.zradiogroup.ZRadioGroup>
+        </com.miracle.base.view.zradiogroup.ZRadioGroup>
     </LinearLayout>
 
 </layout>

@@ -1,4 +1,4 @@
-package com.miracle.michael.naoh;
+package com.miracle.michael;
 
 import org.junit.Test;
 

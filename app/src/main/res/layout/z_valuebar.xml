@@ -23,7 +23,7 @@
                 android:textSize="10sp" />
 
 
-            <com.miracle.michael.naoh.common.view.zchatview.ZTextView
+            <com.miracle.base.view.zchatview.ZTextView
                 android:id="@+id/tvIndexBody"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -33,7 +33,7 @@
         </LinearLayout>
 
 
-        <com.miracle.michael.naoh.common.view.zchatview.ZArrowView
+        <com.miracle.base.view.zchatview.ZArrowView
             android:layout_width="3dp"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"

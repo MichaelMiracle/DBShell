@@ -11,7 +11,7 @@
         android:padding="15dp">
 
 
-        <com.miracle.michael.naoh.common.view.IconFontTextView
+        <com.miracle.base.view.IconFontTextView
             android:id="@+id/tvIconLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
             android:textColor="@color/main_text_color"
             android:textSize="14sp" />
 
-        <com.miracle.michael.naoh.common.view.IconFontTextView
+        <com.miracle.base.view.IconFontTextView
             android:id="@+id/tvIconRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

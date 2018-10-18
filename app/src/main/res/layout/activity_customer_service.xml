@@ -8,7 +8,7 @@
         android:orientation="vertical">
 
 
-        <com.miracle.michael.naoh.common.view.ItemBar
+        <com.miracle.base.view.ItemBar
             android:id="@+id/ibQQ"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
             app:ItemBar_Left_TextColor="@color/qqBlue"
             app:ItemBar_Text="联系QQ客服" />
 
-        <com.miracle.michael.naoh.common.view.ItemBar
+        <com.miracle.base.view.ItemBar
             android:id="@+id/ibWechat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

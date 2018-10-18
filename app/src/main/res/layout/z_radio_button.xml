@@ -19,7 +19,7 @@
                 android:background="@color/main_color"
                 android:visibility="gone" />
 
-            <com.miracle.michael.naoh.common.view.zradiogroup.IconFontCheckableTextView
+            <com.miracle.base.view.zradiogroup.IconFontCheckableTextView
                 android:id="@+id/tvIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
                 android:textSize="20sp"
                 android:visibility="gone" />
 
-            <com.miracle.michael.naoh.common.view.zradiogroup.IconFontCheckableTextView
+            <com.miracle.base.view.zradiogroup.IconFontCheckableTextView
                 android:id="@+id/tvText"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"

@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.miracle.michael.naoh.common.view.TitleBar
+        <com.miracle.base.view.TitleBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:TitleBar_Background="@color/dark_red"
@@ -15,14 +15,14 @@
             app:TitleBar_TextColor="@color/white"
             app:TitleBar_Title="消息" />
 
-        <com.miracle.michael.naoh.common.view.ItemBar
+        <com.miracle.base.view.ItemBar
             android:id="@+id/ibGroupChat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:ItemBar_Left_Icon="@string/icon_chatroom"
             app:ItemBar_Text="聊天室" />
 
-        <com.miracle.michael.naoh.common.view.ItemBar
+        <com.miracle.base.view.ItemBar
             android:id="@+id/ibCustomerService"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

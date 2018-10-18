@@ -28,7 +28,7 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <com.miracle.michael.naoh.common.view.CircleImageView
+                    <com.miracle.base.view.CircleImageView
                         android:id="@+id/ivHeadImg"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -45,7 +45,7 @@
                 </LinearLayout>
 
 
-                <com.miracle.michael.naoh.common.view.IconFontTextView
+                <com.miracle.base.view.IconFontTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/icon_right_arrow"
@@ -53,7 +53,7 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <com.miracle.michael.naoh.common.view.ItemBar
+            <com.miracle.base.view.ItemBar
                 android:id="@+id/ibOrderManage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
                 app:ItemBar_Text="彩票分析" />
 
 
-            <com.miracle.michael.naoh.common.view.ItemBar
+            <com.miracle.base.view.ItemBar
                 android:id="@+id/ibBailManage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
                 app:ItemBar_Left_Icon="@string/icon_my_collections"
                 app:ItemBar_Text="我的收藏" />
 
-            <com.miracle.michael.naoh.common.view.ItemBar
+            <com.miracle.base.view.ItemBar
                 android:id="@+id/ibGroupChat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
                 app:ItemBar_Text="聊天室" />
 
 
-            <com.miracle.michael.naoh.common.view.ItemBar
+            <com.miracle.base.view.ItemBar
                 android:id="@+id/ibCustomerService"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
                 app:ItemBar_Left_Icon="@string/icon_customer_service"
                 app:ItemBar_Text="客服" />
 
-            <com.miracle.michael.naoh.common.view.ItemBar
+            <com.miracle.base.view.ItemBar
                 android:id="@+id/ibShare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
                 app:ItemBar_Left_TextSize="12sp"
                 app:ItemBar_Text="分享" />
 
-            <com.miracle.michael.naoh.common.view.ItemBar
+            <com.miracle.base.view.ItemBar
                 android:id="@+id/ibSettings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
                 app:ItemBar_Text="@string/text_settings" />
 
 
-            <com.miracle.michael.naoh.common.view.ItemBar
+            <com.miracle.base.view.ItemBar
                 android:id="@+id/ibAboutUs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

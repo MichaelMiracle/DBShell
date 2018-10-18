@@ -33,7 +33,7 @@
                 android:textSize="18sp" />
         </FrameLayout>
 
-        <com.miracle.michael.naoh.part6.view.LottoTrendView
+        <com.miracle.michael.part6.view.LottoTrendView
             android:id="@+id/ltv_trendView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -311,7 +311,7 @@
                 </LinearLayout>
 
 
-                <com.miracle.michael.naoh.part6.view.LottoTrendView
+                <com.miracle.michael.part6.view.LottoTrendView
                     android:id="@+id/trend_trendView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
